@@ -1,3 +1,4 @@
+
 <html lang="zh-CN"><head><script src="https://hm.baidu.com/hm.js?0aaa83cef5cacf4a4a18375511428653"></script><script src="https://hm.baidu.com/hm.js?30aa1fee852c134aa66190e83b28c951"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,164 +94,6 @@ var _hmt = _hmt || [];
 
 
 
-<style>
-  /* 添加一些基础样式使页面更美观 */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
-  }
-  
-  h1 {
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    text-align: center;
-    color: #34495e;
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-</style>
-</head>
-<body>
-  
-
-<script>
-  // 页面加载完毕立即弹出广告
-  (function() {
-    // 创建弹出广告容器
-    var adDiv = document.createElement('div');
-    adDiv.id = 'popupAd';
-    adDiv.style.position = 'fixed';
-    adDiv.style.top = '50%';
-    adDiv.style.left = '50%';
-    adDiv.style.transform = 'translate(-50%, -50%)';
-    adDiv.style.maxWidth = '90vw';
-    adDiv.style.maxHeight = '90vh';
-    adDiv.style.width = 'auto';
-    adDiv.style.height = 'auto';
-    adDiv.style.backgroundColor = '#fff';
-    adDiv.style.boxShadow = '0 5px 25px rgba(0,0,0,0.3)';
-    adDiv.style.zIndex = '9999';
-    adDiv.style.borderRadius = '8px';
-    adDiv.style.overflow = 'hidden';
-    adDiv.style.display = 'flex';
-    adDiv.style.justifyContent = 'center';
-    adDiv.style.alignItems = 'center';
-
-    // 创建广告图片，包裹在a标签中，点击跳转
-    var link = document.createElement('a');
-    link.href = 'https://gdsfx509.vip'; // 替换成你的广告网址
-    link.target = '_blank';
-    link.style.display = 'block';
-    link.style.width = '100%';
-    link.style.height = '100%';
-
-    var img = document.createElement('img');
-    // 使用高质量图片，支持响应式
-    img.src = 'https://txmov2.a.kwimgs.com/bs2/upload-kwaishop-material-public/dXBsb2FkLWt3YWlzaG9wLW1hdGVyaWFsLXB1YmxpYzpNRVNTQUdFX0NFTlRFUl9GRUVEQkFDSzo1MTc0NjY2OTQwOk1FUkNIQU5UOltCQDI2NTVkYzYxOjIwNTI1Njc4MDAwOTQw.jpg';
-    img.alt = '广告图片';
-    img.style.width = '100%';
-    img.style.height = 'auto';
-    img.style.maxWidth = '100%';
-    img.style.maxHeight = '100%';
-    img.style.objectFit = 'contain';
-    img.style.display = 'block';
-    img.style.cursor = 'pointer';
-    
-    // 防止图片模糊
-    img.style.imageRendering = '-webkit-optimize-contrast';
-    img.style.imageRendering = 'crisp-edges';
-    img.style.imageRendering = 'pixelated';
-
-    // 将图片放入链接中
-    link.appendChild(img);
-
-    // 关闭按钮 - 改为右上角X
-    var closeBtn = document.createElement('div');
-    closeBtn.innerHTML = '&times;';
-    closeBtn.style.position = 'absolute';
-    closeBtn.style.top = '15px';
-    closeBtn.style.right = '20px';
-    closeBtn.style.width = '35px';
-    closeBtn.style.height = '35px';
-    closeBtn.style.backgroundColor = 'rgba(0,0,0,0.7)';
-    closeBtn.style.color = '#fff';
-    closeBtn.style.borderRadius = '50%';
-    closeBtn.style.display = 'flex';
-    closeBtn.style.justifyContent = 'center';
-    closeBtn.style.alignItems = 'center';
-    closeBtn.style.cursor = 'pointer';
-    closeBtn.style.fontSize = '22px';
-    closeBtn.style.fontWeight = 'bold';
-    closeBtn.style.zIndex = '10';
-    closeBtn.style.transition = 'all 0.3s ease';
-    closeBtn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
-
-    // 鼠标悬停效果
-    closeBtn.onmouseover = function() {
-      this.style.backgroundColor = 'rgba(0,0,0,0.9)';
-      this.style.transform = 'scale(1.1)';
-    };
-    
-    closeBtn.onmouseout = function() {
-      this.style.backgroundColor = 'rgba(0,0,0,0.7)';
-      this.style.transform = 'scale(1)';
-    };
-
-    closeBtn.onclick = function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      document.body.removeChild(adDiv);
-    };
-
-    // 组装广告
-    adDiv.appendChild(link);        // 点击图片可跳转
-    adDiv.appendChild(closeBtn);    // 关闭按钮
-
-    // 添加到页面
-    document.body.appendChild(adDiv);
-    
-    // 添加半透明遮罩层
-    var overlay = document.createElement('div');
-    overlay.style.position = 'fixed';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100%';
-    overlay.style.height = '100%';
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.7)';
-    overlay.style.zIndex = '9998';
-    document.body.appendChild(overlay);
-    
-    // 点击遮罩层也可以关闭弹窗
-    overlay.onclick = function() {
-      document.body.removeChild(adDiv);
-      document.body.removeChild(overlay);
-    };
-    
-    // 关闭弹窗时也移除遮罩层
-    var originalClose = closeBtn.onclick;
-    closeBtn.onclick = function(e) {
-      originalClose.call(this, e);
-      document.body.removeChild(overlay);
-    };
-  })();
-</script>
 
 
 
@@ -288,7 +131,7 @@ var _hmt = _hmt || [];
         <div id="nav_cat" style="margin-bottom:4px;padding-bottom: 5px;">
             <div class="v-s-ul-time-vs">
                     <span class="v-s-li-nav-link-vs"><a href="/" class="active">首页</a></span>
-                        <a href="https://2aayy.shop/?channelCode=2aayy" class="v-s-li-nav-link-vs cc1">同城交友</a>
+                        <a href="https://89cademine.xyz/?u=QIP7m3oi7c8m" class="v-s-li-nav-link-vs cc1">同城交友</a>
 
                           <a href="https://1372.w1372689.vip/?cid=8295678" class="v-s-li-nav-link-vs cc1">注册送888</a>
 						  
@@ -325,14 +168,6 @@ var _hmt = _hmt || [];
 <script type="text/javascript">
     Xj.adv.banner('%5B%7B%22id%22%3A1473%2C%22title%22%3A%22%E5%90%8C%E5%9F%8E%E7%BA%A6%E7%82%AE%22%2C%22image%22%3A%22https%3A%2F%2Ftxmov2.a.kwimgs.com%2Fbs2%2Fupload-kwaishop-material-public%2FdXBsb2FkLWt3YWlzaG9wLW1hdGVyaWFsLXB1YmxpYzpNRVNTQUdFX0NFTlRFUl9GRUVEQkFDSzo1MTc0NjY2OTQwOk1FUkNIQU5UOltCQDQ4MjcxNDllOjE5MDA0NzA0NjYwOTQw.jpg%22%2C%22url%22%3A%22https%3A%2F%2Fhiggm288.vip%22%2C%22hits%22%3A0%2C%22introduce%22%3A%22%22%7D%2C%7B%22id%22%3A1549%2C%22title%22%3A%22%E5%90%8C%E5%9F%8E%E7%BA%A6%E7%82%AE%22%2C%22image%22%3A%22https%3A%2F%2Ftxmov2.a.kwimgs.com%2Fbs2%2Fupload-kwaishop-material-public%2FdXBsb2FkLWt3YWlzaG9wLW1hdGVyaWFsLXB1YmxpYzpNRVNTQUdFX0NFTlRFUl9GRUVEQkFDSzo1MTc0NjY2OTQwOk1FUkNIQU5UOltCQDU0NWY0YzQwOjE5MDU5Mjk3MDQ0OTQw.jpg%22%2C%22url%22%3A%22https%3A%2F%2Fhiggm288.vip%22%2C%22hits%22%3A0%2C%22introduce%22%3A%22%22%7D%5D');
 </script><div class="banner1" style="margin-bottom: 6px;"><a aid="1549" href="https://sddfhong345667.pifadiguaye.com/?cid=3185973" target="_blank" referrerpolicy="no-referrer" class="downurl"><img src="https://shippp.tutu1599.top/img/z123/pghf2.gif" style="height:46px;max-width:100%;overflow:hidden; border-radius: 5px;"></a></div><div class="banner1" style="margin-bottom: 6px;"><a aid="1473" href="https://aavcfrqpjmqk.ouluuka.cn/h5/?cid=4405570" target="_blank" referrerpolicy="no-referrer" class="downurl"><img src="https://shippp.tutu1599.top/img/z123/xpjhf1.gif" style="height:46px;max-width:100%;overflow:hidden; border-radius: 5px;"></a></div>
-
-
-
-
-
-
-
-
 
 
 <div>
@@ -589,7 +424,9 @@ var _hmt = _hmt || [];
                     </div>
 					
 					
-
+                         
+					
+                    
 					
 					
                   
@@ -705,7 +542,7 @@ var _hmt = _hmt || [];
                   <div class="vod-item a-link" to="https://krevonix.com/20251029/RXMvkow1/2000kb/hls/index.m3u8">
                         <div class="random" style="width:100%">
                             <div class="rank-a" style="height: 115.5px;">
-                                <img class="lazy lazy-img-fadein" data-original="https://res-pp.atkqsc.com/image/img/2026-06-11/minio/cff3f5460aa44654.dat" style="width: 100%; height: 100%; object-fit: cover;" src="https://fqjpg7.top/upload/vod/20250916-1/3150f6f2cc18fea72c05398ea2f74c56.png">
+                                <img class="lazy lazy-img-fadein" data-original="https://res-pp.atkqsc.com/image/img/2026-06-11/minio/cff3f5460aa44654.dat" style="width: 100%; height: 100%; object-fit: cover;" src="https://pic8.ocdn.stream/videos/202504/25/680ab00940114f6bdee21cd2/poster2.jpg">
                                 <div class="motion-preview"></div>
                                 <div class="mask_info">
                                     <div class="pre-time"><span><script>document.write(secondsToHMS(1871))</script>00:31:11</span></div>
@@ -1651,7 +1488,7 @@ var _hmt = _hmt || [];
     </a>
   </div>
   <div class="banner1" style="margin-bottom: 6px;width:100%;">
-    <a aid="1563" href="https://xsaopc.iotnwv.top:16582/?channelCode=ypssp" target="_blank" referrerpolicy="no-referrer" class="downurl">
+    <a aid="1563" href="https://higgm288.vip" target="_blank" referrerpolicy="no-referrer" class="downurl">
       <img src="https://txmov2.a.kwimgs.com/bs2/upload-kwaishop-material-public/dXBsb2FkLWt3YWlzaG9wLW1hdGVyaWFsLXB1YmxpYzpNRVNTQUdFX0NFTlRFUl9GRUVEQkFDSzo1MTc0NjY2OTQwOk1FUkNIQU5UOltCQDY5YjI4NWU1OjE5MDYwMjcwMjE2OTQw.jpg" style="max-width:100%; height: 46px;overflow:hidden; border-radius: 3px;">
     </a>
   </div>
@@ -1666,21 +1503,21 @@ var _hmt = _hmt || [];
     <div class="footer-fixed-abk" style="max-height: 65px;">
         <div id="bottomFixed" class="newtipsbottom swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
             <div class="swiper-wrapper" style="transition-duration: 300ms; transform: translate3d(-1000px, 0px, 0px);" id="swiper-wrapper-1022b6c71d77f2d62" aria-live="off"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 500px;" role="group" aria-label="1 / 1">
-                    <a aid="1504" href="https://xsaopc.iotnwv.top:16582/?channelCode=ypssp" target="_blank" referrerpolicy="no-referrer" class="downurl">
+                    <a aid="1504" href="https://higgm288.vip" target="_blank" referrerpolicy="no-referrer" class="downurl">
                         <div class="abk-image">
                             <img src="https://txmov2.a.kwimgs.com/bs2/upload-kwaishop-material-public/dXBsb2FkLWt3YWlzaG9wLW1hdGVyaWFsLXB1YmxpYzpNRVNTQUdFX0NFTlRFUl9GRUVEQkFDSzo1MTc0NjY2OTQwOk1FUkNIQU5UOltCQDM0N2VlZjUxOjE3OTYzODEwNjY5OTQw.jpg" style="width:100%;max-width:500px;">
                         </div>
                     </a>
                 </div>
                 <div class="swiper-slide swiper-slide-duplicate-active swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 500px;" role="group" aria-label="1 / 1">
-                    <a aid="1504" href="https://xsaopc.iotnwv.top:16582/?channelCode=ypssp" target="_blank" referrerpolicy="no-referrer" class="downurl">
+                    <a aid="1504" href="https://higgm288.vip" target="_blank" referrerpolicy="no-referrer" class="downurl">
                         <div class="abk-image">
                             <img src="https://txmov2.a.kwimgs.com/bs2/upload-kwaishop-material-public/dXBsb2FkLWt3YWlzaG9wLW1hdGVyaWFsLXB1YmxpYzpNRVNTQUdFX0NFTlRFUl9GRUVEQkFDSzo1MTc0NjY2OTQwOk1FUkNIQU5UOltCQDM0N2VlZjUxOjE3OTYzODEwNjY5OTQw.jpg" style="width:100%;max-width:500px;">
                         </div>
                     </a>
                 </div>
             <div class="swiper-slide swiper-slide-duplicate swiper-slide-active swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 500px;" role="group" aria-label="1 / 1">
-                    <a aid="1504" href="https://xsaopc.iotnwv.top:16582/?channelCode=ypssp" target="_blank" referrerpolicy="no-referrer" class="downurl">
+                    <a aid="1504" href="https://higgm288.vip" target="_blank" referrerpolicy="no-referrer" class="downurl">
                         <div class="abk-image">
                             <img src="https://txmov2.a.kwimgs.com/bs2/upload-kwaishop-material-public/dXBsb2FkLWt3YWlzaG9wLW1hdGVyaWFsLXB1YmxpYzpNRVNTQUdFX0NFTlRFUl9GRUVEQkFDSzo1MTc0NjY2OTQwOk1FUkNIQU5UOltCQDM0N2VlZjUxOjE3OTYzODEwNjY5OTQw.jpg" style="width:100%;max-width:500px;">
                         </div>
